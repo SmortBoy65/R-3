@@ -450,6 +450,8 @@ async def start(client, message):
         btn = [[
             InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
         ]]
+
+        [InlineKeyboardButton("⚡ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ⚡", url="https://t.me/HowToUseBot101/8/")]
         await message.reply_text(
             text="<b>You are not verified !\nKindly verify to continue !</b>",
             protect_content=True,
