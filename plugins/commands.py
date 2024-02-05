@@ -251,7 +251,7 @@ async def start(client, message):
             
             await message.reply_text(
                 text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
-                protect_content=True
+                protect_content=False
                 ,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('✨ Rᴇᴛᴜʀɴ ᴛᴏ ɢʀᴏᴜᴘ', url=f'https://t.me/r3_bots2')]])
             )
             await verify_user(client, userid, token)
@@ -325,7 +325,7 @@ async def start(client, message):
                 
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    protect_content=True,
+                    protect_content=False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
@@ -390,7 +390,7 @@ async def start(client, message):
                 
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    protect_content=True,
+                    protect_content=False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
@@ -450,7 +450,7 @@ async def start(client, message):
         
         await message.reply_text(
             text="<b>You are not verified !\nKindly verify to continue !</b>",
-            protect_content=True,
+            protect_content=False,
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
