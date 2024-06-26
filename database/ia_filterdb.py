@@ -69,7 +69,24 @@ async def save_file(media):
             logger.info(f'{getattr(media, "file_name", "NO_FILE")} is saved to database')
             return True, 1
 
+pattern_season_episode = re.compile(r"s(\d{1,2})\s*e(\d{1,2})", re.IGNORECASE)
+pattern_season_only = re.compile(r"season\s*(\d{1,2})", re.IGNORECASE)
+pattern_s_ep = re.compile(r"s(\d{1,2})\s*ep\s*(\d{1,2})", re.IGNORECASE)
+pattern_season_episode_full = re.compile(r"season\s*(\d{1,2})\s*episode\s*(\d{1,2})", re.IGNORECASE)
 
+def format_query(query):
+    
+    query = pattern_season_episode_full.sub(lambda m: f"s{int(m.group(1)):02}e{int(m.group(2)):02}", query)
+    
+    query = pattern_season_only.sub(lambda m: f"s{int(m.group(1)):02}", query)
+    
+    
+    query = pattern_s_ep.sub(lambda m: f"s{int(m.group(1)):02}e{int(m.group(2)):02}", query)
+    
+    
+    query = pattern_season_episode.sub(lambda m: f"s{int(m.group(1)):02}e{int(m.group(2)):02}", query)
+    
+    return query
 
 async def get_search_results(chat_id, query, file_type=None, max_results=10, offset=0, filter=False):
     """For given query return (results, next_offset)"""
@@ -87,7 +104,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
                 max_results = 10
             else:
                 max_results = int(MAX_B_TN)
-    query = query.strip()
+    query = format_query(query.strip())
     #if filter:
         #better ?
         #query = query.replace(' ', r'(\s|\.|\+|\-|_)')
