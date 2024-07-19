@@ -82,7 +82,7 @@ async def pm_text(bot, message):
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
          text=f"<b>Hᴇʏ {user} ⚡️ ,\n\nSᴇɴᴅ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝Rᴇᴏ̨ᴜᴇsᴛ ɢʀᴏᴜᴘ", url=f"https://t.me/R_3Group")]])
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝Rᴇᴏ̨ᴜᴇsᴛ ɢʀᴏᴜᴘ", url=f"https://t.me/R_3Group1")]])
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
