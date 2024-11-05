@@ -30,8 +30,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url="https://t.me/R_3Group3"),
-                    InlineKeyboardButton('Mᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/R_3Group3')
+                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url="https://t.me/R3_group1"),
+                    InlineKeyboardButton('Mᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/R3_group1')
                 ],[
                     InlineKeyboardButton('Jᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK)
                   ]]
@@ -51,7 +51,7 @@ async def start(client, message):
                     InlineKeyboardButton('Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('Eᴀʀɴ ᴍᴏɴᴇʏ ', callback_data="shortlink_info"),
-                    InlineKeyboardButton(' Mᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/R_3Group3')
+                    InlineKeyboardButton(' Mᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/R3_group1')
                 ],[
                     InlineKeyboardButton(' Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about')
@@ -252,7 +252,7 @@ async def start(client, message):
             await message.reply_text(
                 text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
                 protect_content=False
-                ,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('✨ Rᴇᴛᴜʀɴ ᴛᴏ ɢʀᴏᴜᴘ', url=f'https://t.me/R_3Group3')]])
+                ,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('✨ Rᴇᴛᴜʀɴ ᴛᴏ ɢʀᴏᴜᴘ', url=f'https://t.me/R3_group1')]])
             )
             await verify_user(client, userid, token)
         else:
